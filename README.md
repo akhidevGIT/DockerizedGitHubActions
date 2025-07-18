@@ -1,0 +1,1 @@
+This is a Flask app. This project is to demonstrate CI/CD workflows created using GitHub Actions to deploy dockerised Flask app on DockerHub
