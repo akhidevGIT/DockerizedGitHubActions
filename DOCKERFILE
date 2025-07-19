@@ -1,0 +1,28 @@
+# Use official python image from the docker hub
+FROM python:3.9-slim
+
+# Set working directory
+WORKDIR /usr/src/app
+
+# Copy requirements.txt to containers working directory
+COPY requirements.txt ./
+
+# Install dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy current directory to containers working directory
+COPY . .
+
+# Tells docker that the application inside the container listens on port 5000
+EXPOSE 5000
+
+# Command to run flask app
+CMD ["python", "app.py"]
+
+
+
+
+
+
+
+
